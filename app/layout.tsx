@@ -11,11 +11,11 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-	metadataBase: new URL('https://safco-uzb.vercel.app'),
+	metadataBase: new URL('https://safco.vercel.app'),
 	title: 'Safco — Leader in the Uzbek workwear market!',
 	description:
 		'Рабочая одежда сегодня, является обязательным атрибутом любого работника, создавая безопасные условия труда, притом цена ее зависит от многих факторов. Прежде всего нужна не только для защиты работника от травм, грязи и других негативных факторов. В том числе она подчеркивает корпоративный стиль, поскольку униформа продавцов супермаркетов или официантов также является спецодеждой. ',
-	authors: [{ name: 'Otabek Abdiraimov', url: 'https://safco-uzb.vercel.app' }],
+	authors: [{ name: 'Otabek Abdiraimov', url: 'https://safco.vercel.app' }],
 	icons: { icon: '/favicons.png' },
 	keywords:
 		'Рабочая одежда, Безопасные условия труда, Цена спецодежды, Защита работника,Корпоративный стиль, Униформа для продавцов, Спецодежда для официантов, Травмобезопасность, Гигиеническая защита, Профессиональная одежда',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 		description:
 			'Рабочая одежда сегодня, является обязательным атрибутом любого работника, создавая безопасные условия труда, притом цена ее зависит от многих факторов. Прежде всего нужна не только для защиты работника от травм, грязи и других негативных факторов. В том числе она подчеркивает корпоративный стиль, поскольку униформа продавцов супермаркетов или официантов также является спецодеждой',
 		type: 'website',
-		url: 'https://safco-uzb.vercel.app',
+		url: 'https://safco.vercel.app',
 		locale: 'en_EN',
 		images: [{ url: '/favicons.png' }],
 		countryName: 'Uzbekistan',
