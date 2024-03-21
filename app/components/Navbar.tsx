@@ -57,6 +57,7 @@ export const Navbar = () => {
 						variant={'outline'}
 					>
 						<ShoppingBag />
+						{''}
 					</Button>
 					<ModeToggle />
 					<MobileMenu />

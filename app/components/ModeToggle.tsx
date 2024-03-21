@@ -17,6 +17,7 @@ function ModeToggle() {
 			variant={'outline'}
 			onClick={() => setTheme('light')}
 		>
+			{''}
 			<Sun />
 		</Button>
 	) : (
@@ -26,6 +27,7 @@ function ModeToggle() {
 			variant={'outline'}
 			onClick={() => setTheme('dark')}
 		>
+			{''}
 			<Moon />
 		</Button>
 	)

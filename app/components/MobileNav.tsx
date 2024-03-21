@@ -24,6 +24,7 @@ const MobileMenu = () => {
 					className='flex flex-col gap-y-1.5 h-10 w-10 sm:h-12 sm:w-12 md:h-18 md:w-18'
 					variant={'outline'}
 				>
+					{''}
 					<Menu />
 				</Button>
 			</SheetTrigger>
