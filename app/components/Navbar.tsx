@@ -4,17 +4,20 @@ import { Button } from '@/components/ui/button'
 import { ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useShoppingCart } from 'use-shopping-cart'
+import MobileMenu from './MobileNav'
 import ModeToggle from './ModeToggle'
 
 const links = [
 	{ name: 'Home', href: '/' },
-	{ name: 'Winter Collection', href: '/winter' },
-	{ name: 'Summer Collection', href: '/summer' },
-	{ name: 'News', href: '/news' },
+	{ name: 'Winter Collection', href: '/category/winter' },
+	{ name: 'Summer Collection', href: '/category/summer' },
+	{ name: 'Contact', href: '/contact' },
 ]
 
 export const Navbar = () => {
 	const pathname = usePathname()
+	const { handleCartClick } = useShoppingCart()
 
 	return (
 		<header className='mb-8 py-4 border-b'>
@@ -37,7 +40,7 @@ export const Navbar = () => {
 								</Link>
 							) : (
 								<Link
-									className='text-lg font-medium transition duration-100 hover:text-primary'
+									className='text-lg font-medium transition duration-300 hover:text-primary'
 									href={link.href}
 								>
 									{link.name}
@@ -49,12 +52,14 @@ export const Navbar = () => {
 
 				<div className='flex gap-2'>
 					<Button
+						onClick={() => handleCartClick()}
 						className='flex flex-col gap-y-1.5 h-10 w-10 sm:h-12 sm:w-12 md:h-18 md:w-18'
 						variant={'outline'}
 					>
 						<ShoppingBag />
 					</Button>
 					<ModeToggle />
+					<MobileMenu />
 				</div>
 			</div>
 		</header>

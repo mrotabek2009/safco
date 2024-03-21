@@ -1,3 +1,4 @@
+import AddToBag from '@/app/components/AddToBag'
 import { products } from '@/app/constants/products'
 import { Button } from '@/components/ui/button'
 import { Home, Star, Truck } from 'lucide-react'
@@ -13,16 +14,17 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 				<div>
 					{product ? (
 						<div className='flex flex-col md:flex-row justify-between gap-7'>
-							<div className='relative overflow-hidden aspect-square cursor-pointer dark:bg-gray-500 bg-gray-200 rounded-xl group'>
+							<div className='relative overflow-hidden aspect-square cursor-pointer dark:bg-gray-500 bg-gray-200 rounded-xl group md:h-[30rem] md:w-[30rem]'>
 								<Image
-									className='object-cover aspect-square group-hover:scale-110 transition duration-500 ease-in-out'
+									className='object-cover aspect-square group-hover:scale-110 transition duration-300 ease-in-out'
+									priority
 									width={500}
 									height={500}
 									src={product.images}
 									alt={product.name}
 								/>
 							</div>
-							<div className='flex flex-col gap-5'>
+							<div className='flex flex-col gap-5 md:w-1/2'>
 								<span className='mb-0.5 inline-block dark:text-gray-300 text-gray-600'>
 									{product.category}
 								</span>
@@ -34,21 +36,21 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 										<span className='text-sm'>4.2</span>
 										<Star className='h-5 w-5' />
 									</Button>
-									<span className='text-sm transition duration-100'>
+									<span className='text-sm transition duration-300'>
 										56 ratings
 									</span>
 								</div>
 								<hr className='w-full' />
-								<span className='text-2xl font-medium'>
+								<span className='text-lg md:text-2xl font-medium'>
 									<b>Description: </b>
 									{product.description}
 								</span>
 								<div className='flex items-center gap-3'>
-									<span className='text-2xl font-medium'>
+									<span className='text-lg md:text-2xl font-medium'>
 										<b>Price: </b>
 										{product.price}.000 USZ
 									</span>
-									<del className='text-2xl text-red-500 font-medium'>
+									<del className='text-md md:text-2xl text-red-500 font-medium'>
 										{product.price + 30}.000 USZ
 									</del>
 								</div>
@@ -61,8 +63,14 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 									<span className='text-sm'>2-4 Day Shipping</span>
 								</div>
 
-								<div className='flex gap-2 5'>
-									<Button className='p-7'>Add to Cart</Button>
+								<div className='flex md:justify-normal justify-between gap-2 mb-20'>
+									<AddToBag
+										currency='USZ'
+										description={product.description}
+										image={product.images}
+										name={product.name}
+										price={product.price}
+									/>
 									<Button variant={'outline'} className='p-7'>
 										Checkout now
 									</Button>
@@ -85,4 +93,15 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 			</div>
 		</div>
 	)
+}
+export async function generateMetadata({
+	params,
+}: {
+	params: { slug: string }
+}) {
+	const product = products.find(product => product.slug === params.slug)
+
+	return {
+		title: product?.name,
+	}
 }

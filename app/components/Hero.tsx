@@ -15,14 +15,14 @@ export const Hero = () => {
 					<div className='flex flex-col items-center justify-between gap-8 md:flex-row'>
 						<div className='flex h-12 w-64 divide-x overflow-hidden rounded-lg border'>
 							<Link
-								href='/winter'
-								className='flex w-2/3 items-center justify-center transition duration-100 dark:hover:bg-gray-100 dark:hover:text-black dark:active:bg-gray-200 hover:bg-primary hover:text-white active:bg-primary/80'
+								href='/category/winter'
+								className='flex w-2/3 items-center justify-center transition duration-300 dark:hover:bg-gray-100 dark:hover:text-black dark:active:bg-gray-200 hover:bg-primary hover:text-white active:bg-primary/80'
 							>
 								Winter Collection
 							</Link>
 							<Link
-								href='/summer'
-								className='flex w-1/3 items-center justify-center transition duration-100 dark:hover:bg-gray-100 dark:hover:text-black dark:active:bg-gray-200
+								href='/category/summer'
+								className='flex w-1/3 items-center justify-center transition duration-300 dark:hover:bg-gray-100 dark:hover:text-black dark:active:bg-gray-200
 								hover:bg-primary hover:text-white active:bg-primary/80'
 							>
 								Summer
@@ -33,7 +33,7 @@ export const Hero = () => {
 				<div className='mb-12 flex w-full md:mb-16 lg:w-2/3'>
 					<div className='bg-gray-300 dark:bg-slate-700 relative left-10 top-12 z-10 -ml-12 overflow-hidden rounded-lg shadow-lg md:left-20 md:top-16 lg:ml-0'>
 						<Image
-							src='/clothes1.png'
+							src='/clothes4.png'
 							alt='hero img'
 							priority
 							className='h-full w-full object-cover object-center'
@@ -43,7 +43,7 @@ export const Hero = () => {
 					</div>
 					<div className='bg-gray-300 dark:bg-slate-700 overflow-hidden rounded-lg shadow-lg'>
 						<Image
-							src='/clothes2.png'
+							src='/clothes5.png'
 							alt='hero img'
 							priority
 							className='h-full w-full object-cover object-center'

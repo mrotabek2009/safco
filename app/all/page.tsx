@@ -1,29 +1,24 @@
-import { ArrowRight } from 'lucide-react'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { products } from '../constants/products'
 
-export const Newest = () => {
+export const metadata: Metadata = {
+	title: 'All products',
+}
+
+export default function All() {
 	return (
 		<div>
 			<div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
 				<div className='flex justify-between items-center'>
 					<h2 className='text-2xl font-bold tracking-tight'>
-						Our newest products
+						Our all products
 					</h2>
-					<Link
-						href='/all'
-						className='hover:translate-x-2 hover:text-primary transition duration-300 flex items-center gap-x-1 '
-					>
-						<span>See all</span>
-						<span>
-							<ArrowRight />
-						</span>
-					</Link>
 				</div>
 
 				<div className='mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
-					{products.slice(0, 4).map(product => (
+					{products.map(product => (
 						<div key={product.slug} className='group'>
 							<Link href={`/product/${product.slug}`}>
 								<div className='aspect-square w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 transition lg:h-80'>
