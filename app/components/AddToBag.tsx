@@ -29,6 +29,7 @@ export default function AddToBag({
 	}
 	return (
 		<Button
+			aria-label='button'
 			className='p-7'
 			onClick={() => {
 				addItem(product as any), handleCartClick()

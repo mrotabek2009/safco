@@ -52,12 +52,12 @@ export const Navbar = () => {
 
 				<div className='flex gap-2'>
 					<Button
+						aria-label='button'
 						onClick={() => handleCartClick()}
 						className='flex flex-col gap-y-1.5 h-10 w-10 sm:h-12 sm:w-12 md:h-18 md:w-18'
 						variant={'outline'}
 					>
 						<ShoppingBag />
-						{''}
 					</Button>
 					<ModeToggle />
 					<MobileMenu />

@@ -116,7 +116,7 @@ Message: ${values.message}
 							</FormItem>
 						)}
 					/>
-					<Button className='w-fit' size={'lg'}>
+					<Button aria-label='button' className='w-fit' size={'lg'}>
 						<span>Send</span>
 						<Send className='w-4 h-4' />
 					</Button>

@@ -32,7 +32,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 									<b>Title: </b> {product.name}
 								</h1>
 								<div className='mb-6 flex items-center gap-3'>
-									<Button className='rounded-full gap-x-2'>
+									<Button aria-label='button' className='rounded-full gap-x-2'>
 										<span className='text-sm'>4.2</span>
 										<Star className='h-5 w-5' />
 									</Button>
@@ -71,7 +71,11 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 										name={product.name}
 										price={product.price}
 									/>
-									<Button variant={'outline'} className='p-7'>
+									<Button
+										aria-label='button'
+										variant={'outline'}
+										className='p-7'
+									>
 										Checkout now
 									</Button>
 								</div>
@@ -82,7 +86,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 							<h1 className='text-5xl m-auto font-extrabold'>
 								Product not found
 							</h1>
-							<Button>
+							<Button aria-label='button'>
 								<Link href={'/'} className='flex items-center gap-1'>
 									Back to Home <Home />
 								</Link>

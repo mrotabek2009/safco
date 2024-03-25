@@ -13,6 +13,7 @@ export default function HeroSlider() {
 		infinite: true,
 		speed: 500,
 		slidesToShow: 1,
+		arrows: false,
 	}
 
 	return (
@@ -29,7 +30,7 @@ export default function HeroSlider() {
 					<h2 className='text-3xl text-[#0F172A]'>
 						More than 200 companies trust us
 					</h2>
-					<Button>
+					<Button aria-label='button'>
 						<Link href={'/all'}>View all products</Link>
 					</Button>
 				</div>
@@ -44,7 +45,7 @@ export default function HeroSlider() {
 				/>
 				<div className='pl-20 absolute inset-0 flex flex-col items-start gap-4 justify-center text-white'>
 					<h2 className='text-3xl text-[#0F172A]'>Own production</h2>
-					<Button>
+					<Button aria-label='button'>
 						<Link href={'/all'}>View all products</Link>
 					</Button>
 				</div>

@@ -99,7 +99,11 @@ export default function ShoppingCartModal() {
 						</p>
 
 						<div className='mt-6'>
-							<Button onClick={handleCheckoutClick} className='w-full'>
+							<Button
+								aria-label='button'
+								onClick={handleCheckoutClick}
+								className='w-full'
+							>
 								Checkout
 							</Button>
 						</div>
