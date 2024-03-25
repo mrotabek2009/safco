@@ -5,9 +5,9 @@ import { products } from '../constants/products'
 
 export const Newest = () => {
 	return (
-		<div>
-			<div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
-				<div className='flex justify-between items-center'>
+		<div className='flex flex-col justify-center mx-auto'>
+			<div className='mx-auto max-w-2xl px-4 sm:px-6 sm:py-12 lg:max-w-7xl lg:px-8'>
+				<div className='flex justify-between gap-10 md:gap-0 mt-20 md:mt-0 items-center'>
 					<h2 className='text-2xl font-bold tracking-tight'>
 						Our newest products
 					</h2>
@@ -22,7 +22,7 @@ export const Newest = () => {
 					</Link>
 				</div>
 
-				<div className='mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
+				<div className='mt-6 grid w-[18rem] h-[18rem] md:w-auto md:h-auto grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
 					{products.slice(0, 4).map(product => (
 						<div key={product.slug} className='group'>
 							<Link href={`/product/${product.slug}`}>

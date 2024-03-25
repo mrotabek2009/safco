@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
-import Footer from './components/Footer'
 import { Navbar } from './components/Navbar'
 import CartProvider from './components/Providers'
 import ShoppingCartModal from './components/ShoppingCartModal'
@@ -57,7 +56,6 @@ export default function RootLayout({
 						<Navbar />
 						<ShoppingCartModal />
 						{children}
-						<Footer />
 					</ThemeProvider>
 				</CartProvider>
 			</body>

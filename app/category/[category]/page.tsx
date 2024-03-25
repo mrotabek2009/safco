@@ -44,7 +44,7 @@ export default function CategoryPage({
 											<p className='mt-1 text-sm text-white dark:text-gray-600 bg-slate-500 dark:bg-white w-fit p-1.5 cursor-auto rounded-md'>
 												{product.category}
 											</p>
-											<p>{product.price}.000 USZ</p>
+											<p>{product.price}.000 UZS</p>
 										</div>
 									</div>
 								</div>

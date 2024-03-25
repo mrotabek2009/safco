@@ -48,11 +48,11 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 								<div className='flex items-center gap-3'>
 									<span className='text-lg md:text-2xl font-medium'>
 										<b>Price: </b>
-										{product.price}.000 USZ
+										<del className='text-md md:text-2xl text-red-500 font-medium mr-5'>
+											{product.price + 30}.000 UZS
+										</del>
+										{product.price}.000 UZS
 									</span>
-									<del className='text-md md:text-2xl text-red-500 font-medium'>
-										{product.price + 30}.000 USZ
-									</del>
 								</div>
 
 								<span className='text-md text-gray-700 dark:text-gray-200'>
@@ -65,7 +65,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 
 								<div className='flex md:justify-normal justify-between gap-2 mb-20'>
 									<AddToBag
-										currency='USZ'
+										currency='UZS'
 										description={product.description}
 										image={product.images}
 										name={product.name}

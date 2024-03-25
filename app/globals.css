@@ -64,7 +64,7 @@
 	padding: 0 10px;
 }
 #scrollbar::-webkit-scrollbar {
-	width: 12px;
+	width: 5px;
 }
 
 #scrollbar::-webkit-scrollbar-track {
