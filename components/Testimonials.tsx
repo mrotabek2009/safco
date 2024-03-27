@@ -1,4 +1,4 @@
-import { testimonials } from '@/app/constants/testimonials'
+import { testimonials } from '@/src/app/constants/testimonials'
 import { HoverEffect } from './ui/card-hover-effect'
 
 export function Testimonials() {

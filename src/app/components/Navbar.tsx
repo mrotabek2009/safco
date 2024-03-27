@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button'
 import { ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useShoppingCart } from 'use-shopping-cart'
 import MobileMenu from './MobileNav'
 import ModeToggle from './ModeToggle'
 
@@ -17,7 +16,6 @@ const links = [
 
 export const Navbar = () => {
 	const pathname = usePathname()
-	const { handleCartClick } = useShoppingCart()
 
 	return (
 		<header className='mb-8 py-4 border-b'>
@@ -53,7 +51,6 @@ export const Navbar = () => {
 				<div className='flex gap-2'>
 					<Button
 						aria-label='button'
-						onClick={() => handleCartClick()}
 						className='flex flex-col gap-y-1.5 h-10 w-10 sm:h-12 sm:w-12 md:h-18 md:w-18'
 						variant={'outline'}
 					>

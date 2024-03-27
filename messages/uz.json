@@ -1,0 +1,12 @@
+{
+	"Navbar": {
+		"home_link": "Bosh sahifa"
+	},
+	"Index": {
+		"hero_text": "O'zbekistonda ish kiyimlari ishlab chiqarish!",
+		"hero_description": "O‘zbekiston ish kiyimlari bozorida yetakchi!",
+		"winter": "Qish",
+		"all_products": "Hammasini ko'rish",
+		"summer": "Yoz"
+	}
+}

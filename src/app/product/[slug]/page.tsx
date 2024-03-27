@@ -1,11 +1,10 @@
-import AddToBag from '@/app/components/AddToBag'
-import { products } from '@/app/constants/products'
 import { Button } from '@/components/ui/button'
 import { Home, Star, Truck } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { products } from '../../constants/products'
 
-export default function ProductPage({ params }: { params: { slug: string } }) {
+export const  ProductPage({ params }: { params: { slug: string } }) {
 	const product = products.find(product => product.slug === params.slug)
 
 	return (
@@ -64,13 +63,6 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 								</div>
 
 								<div className='flex md:justify-normal justify-between gap-2 mb-20'>
-									<AddToBag
-										currency='UZS'
-										description={product.description}
-										image={product.images}
-										name={product.name}
-										price={product.price}
-									/>
 									<Button
 										aria-label='button'
 										variant={'outline'}

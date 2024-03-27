@@ -1,11 +1,10 @@
 import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
+import { NextIntlClientProvider } from 'next-intl'
 import { Inter } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
-import { Navbar } from './components/Navbar'
-import CartProvider from './components/Providers'
-import ShoppingCartModal from './components/ShoppingCartModal'
-import { ThemeProvider } from './components/ThemeProvider'
+import { Navbar } from '../components/Navbar'
+import { ThemeProvider } from '../components/ThemeProvider'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -34,31 +33,34 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
 	children,
+	params: { locale },
 }: Readonly<{
 	children: React.ReactNode
+	params: {
+		locale: string
+	}
 }>) {
 	return (
 		<html
-			lang='en'
+			lang={locale}
 			className='scrollbar'
 			id='scrollbar'
 			suppressHydrationWarning
 		>
 			<body className={inter.className}>
-				<NextTopLoader
-					color='#2299DD'
-					initialPosition={0.1}
-					easing='ease-in-out'
-					speed={100}
-				/>
-				<CartProvider>
+				<NextIntlClientProvider locale={locale}>
+					<NextTopLoader
+						color='#2299DD'
+						initialPosition={0.1}
+						easing='ease-in-out'
+						speed={100}
+					/>
 					<ThemeProvider attribute='class' defaultTheme='system' enableSystem>
 						<Navbar />
-						<ShoppingCartModal />
 						{children}
 					</ThemeProvider>
-				</CartProvider>
-				<Analytics />
+					<Analytics />
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	)
